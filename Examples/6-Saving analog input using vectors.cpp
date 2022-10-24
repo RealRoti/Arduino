@@ -48,18 +48,18 @@ void loop(){
   
   // SORT VALUES IN THE ARRAY IN ASCENDING ORDER
   int supportVar;
-  int min valueIndex;
+  int vMin;
 
 	for(int i=0; i<4; i++)
 	{
-    min valueIndex = i;
+    min = i;
     for(int j=i+1; j<5; j++)
       {
-        if(values[j] < values[min valueIndex])
-          min valueIndex = j;
+        if(values[j] < values[vMin])
+          vMin = j;
       }
-    supportVar=values[min valueIndex];
-    values[min valueIndex]=values[i];
+    supportVar=values[vMin];
+    values[vMin]=values[i];
     values[i]=supportVar;
 	}
   
@@ -74,7 +74,7 @@ void loop(){
   Serial.println(average);
   
   Serial.print("Min value ");
-  Serial.println(vmin value);
+  Serial.println(vMin);
   
   Serial.print("Max value: ");
   Serial.println(vMax);
